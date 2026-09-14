@@ -9,17 +9,17 @@ import Skills from "./components/Skills"
 
 
 function App() {
-
   return (
-    <div className='bg-[#171d32] h-auto w-full overflow-hidden'>
-      <Navbar/>
-      <Home/>
-      <About/>
-      <Experience/>
-      <Projects/>
-      <Footer/>
+    <div className='bg-[#171d32] min-h-screen w-full overflow-hidden text-slate-100 selection:bg-indigo-600 selection:text-white'>
+      <Navbar />
+      <Home />
+      <About />
+      <Skills />
+      <Experience />
+      <Projects />
+      <Footer />
     </div>
-  )
+  );
 }
 
 export default App
