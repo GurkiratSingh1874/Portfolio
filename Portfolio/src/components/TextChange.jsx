@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react";
 
 const TextChange = () => {
   const texts = [
-    "Hi, I'm Gurkirat Singh",
     "Full-Stack Developer",
-    "NIT Jalandhar Undergrad",
-    "AI & Web Tech Enthusiast"
+    "MERN Stack Engineer",
+    "NITJ CS Undergrad",
+    "AI & RAG Enthusiast"
   ];
   const [currenText, setCurrentText] = useState("");
   const [endValue, setEndValue] = useState(1);
@@ -33,9 +33,9 @@ const TextChange = () => {
   }, [endValue, isForward, index, texts]);
 
   return (
-    <div className="transition-all duration-200">
+    <div className="inline-flex items-center whitespace-nowrap">
       <span>{currenText}</span>
-      <span className="inline-block w-1.5 h-8 md:h-12 bg-[#5367b8] ml-1.5 animate-pulse align-middle" />
+      <span className="inline-block w-1 sm:w-1.5 h-6 sm:h-8 lg:h-9 bg-indigo-400 ml-1.5 animate-pulse" />
     </div>
   );
 };

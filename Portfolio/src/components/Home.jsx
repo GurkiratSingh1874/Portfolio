@@ -14,13 +14,18 @@ function Home() {
           Available for Software Engineering Roles & Internships
         </div>
 
-        <div className="space-y-2">
-          <p className="text-sm font-semibold tracking-widest text-indigo-400 uppercase font-mono">
+        <div className="space-y-1.5">
+          <p className="text-xs sm:text-sm font-semibold tracking-widest text-indigo-400 uppercase font-mono">
             Hello, Welcome to my space
           </p>
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight min-h-[4.5rem] sm:min-h-[5.5rem] md:min-h-[6.5rem] bg-gradient-to-r from-white via-slate-100 to-indigo-300 bg-clip-text text-transparent">
-            <TextChange />
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight text-white leading-none">
+            Gurkirat Singh
           </h1>
+          <div className="h-10 sm:h-12 lg:h-14 flex items-center overflow-hidden">
+            <span className="text-xl sm:text-3xl lg:text-4xl font-extrabold bg-gradient-to-r from-indigo-400 via-purple-300 to-cyan-400 bg-clip-text text-transparent tracking-tight">
+              <TextChange />
+            </span>
+          </div>
         </div>
 
         <p className="text-slate-300 text-base md:text-lg leading-relaxed max-w-2xl font-light">
