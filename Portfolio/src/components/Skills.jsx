@@ -2,31 +2,35 @@ import React from 'react';
 
 const skillCategories = [
   {
-    title: "Languages",
+    title: "Programming Languages",
+    iconColor: "from-blue-500 to-indigo-500",
     skills: ["C++", "Python", "JavaScript", "TypeScript", "HTML5", "CSS3", "SQL"],
   },
   {
-    title: "Frontend Development",
-    skills: ["React.js", "Next.js", "Tailwind CSS", "Vite", "Redux Toolkit", "Responsive Design"],
+    title: "Frontend Engineering",
+    iconColor: "from-cyan-500 to-blue-500",
+    skills: ["React.js", "Next.js", "Tailwind CSS", "Vite", "Redux Toolkit", "Responsive UI", "REST Integrations"],
   },
   {
     title: "Backend & Databases",
-    skills: ["Node.js", "Express.js", "Flask", "MongoDB / Mongoose", "Prisma ORM", "MySQL", "SQLite", "REST APIs"],
+    iconColor: "from-emerald-500 to-teal-500",
+    skills: ["Node.js", "Express.js", "Flask", "MongoDB / Mongoose", "PostgreSQL", "MySQL", "Prisma ORM", "REST APIs"],
   },
   {
-    title: "AI, Tools & Core Concepts",
+    title: "AI, Tools & Core Architecture",
+    iconColor: "from-purple-500 to-pink-500",
     skills: ["RAG Pipelines", "FAISS Vector DB", "Llama 3 / Ollama", "Sentence Transformers", "Git & GitHub", "OOP", "DBMS", "VS Code"],
   },
 ];
 
 function Skills() {
   return (
-    <section id="Skills" className="p-8 md:p-20 text-white max-w-7xl mx-auto">
+    <section id="Skills" className="p-6 md:p-16 max-w-7xl mx-auto text-white">
       <div className="mb-10">
         <span className="text-xs uppercase tracking-widest text-indigo-400 font-mono font-semibold">
-          Technical Expertise
+          Technical Arsenal
         </span>
-        <h2 className="text-3xl md:text-5xl font-extrabold text-white mt-1">
+        <h2 className="text-3xl md:text-5xl font-black text-white mt-1 tracking-tight">
           Skills & Technologies
         </h2>
       </div>
@@ -35,17 +39,20 @@ function Skills() {
         {skillCategories.map((category, index) => (
           <div
             key={index}
-            className="p-6 rounded-2xl bg-black/30 border border-slate-800/80 hover:border-[#465697] transition-all duration-300 shadow-xl shadow-slate-950/40"
+            className="group p-7 rounded-3xl bg-slate-900/40 backdrop-blur-xl border border-slate-800/80 hover:border-indigo-500/40 transition-all duration-300 shadow-xl hover:-translate-y-1 hover:shadow-2xl hover:shadow-indigo-950/30"
           >
-            <h3 className="text-lg md:text-xl font-bold text-indigo-300 mb-4 flex items-center gap-2">
-              <span className="h-2 w-2 rounded-full bg-indigo-400"></span>
-              {category.title}
-            </h3>
+            <div className="flex items-center gap-3 mb-5">
+              <span className={`w-3 h-3 rounded-full bg-gradient-to-r ${category.iconColor} shadow-md`}></span>
+              <h3 className="text-lg md:text-xl font-bold text-white group-hover:text-indigo-300 transition-colors">
+                {category.title}
+              </h3>
+            </div>
+
             <div className="flex flex-wrap gap-2.5">
               {category.skills.map((skill, sIdx) => (
                 <span
                   key={sIdx}
-                  className="px-3 py-1 rounded-lg text-xs md:text-sm font-medium bg-[#141a2e] text-slate-200 border border-indigo-500/20 hover:border-indigo-400 hover:text-white transition-all duration-150"
+                  className="px-3.5 py-1.5 rounded-xl text-xs md:text-sm font-medium bg-slate-950/70 text-slate-200 border border-slate-800/90 group-hover:border-indigo-500/30 hover:border-indigo-400 hover:text-white hover:bg-[#121829] transition-all duration-200 shadow-sm"
                 >
                   {skill}
                 </span>

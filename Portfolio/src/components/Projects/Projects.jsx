@@ -94,31 +94,31 @@ function Projects() {
     : projectsData.filter((p) => p.category === filter);
 
   return (
-    <section id="Projects" className="p-8 md:p-20 text-white max-w-7xl mx-auto">
-      <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+    <section id="Projects" className="p-6 md:p-16 max-w-7xl mx-auto text-white">
+      <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
         <div>
           <span className="text-xs uppercase tracking-widest text-indigo-400 font-mono font-semibold">
-            Showcase
+            Featured Engineering
           </span>
-          <h2 className="text-3xl md:text-5xl font-extrabold text-white mt-1">
+          <h2 className="text-3xl md:text-5xl font-black text-white mt-1 tracking-tight">
             Featured Projects
           </h2>
         </div>
-        <p className="text-slate-400 text-sm md:text-base max-w-md">
-          A selection of full-stack web applications, AI/ML solutions, and software systems I've engineered.
+        <p className="text-slate-400 text-sm md:text-base max-w-md font-light">
+          A showcase of full-stack web applications, AI/ML pipelines, and production systems built with modern engineering standards.
         </p>
       </div>
 
-      {/* Filter Chips */}
-      <div className="flex flex-wrap gap-2 mb-10">
+      {/* Modern Filter Chips */}
+      <div className="flex flex-wrap gap-2.5 mb-10">
         {categories.map((cat) => (
           <button
             key={cat}
             onClick={() => setFilter(cat)}
-            className={`px-4 py-1.5 rounded-full text-xs md:text-sm font-medium transition-all duration-200 ${
+            className={`px-4 py-2 rounded-full text-xs md:text-sm font-semibold transition-all duration-200 cursor-pointer ${
               filter === cat
-                ? "bg-[#465697] text-white shadow-md shadow-indigo-950/60"
-                : "bg-slate-900/80 text-slate-400 hover:text-white hover:bg-slate-800 border border-slate-800"
+                ? "bg-gradient-to-r from-indigo-600 to-purple-600 text-white shadow-lg shadow-indigo-950/60 border border-indigo-400/30 scale-105"
+                : "bg-slate-900/60 text-slate-400 hover:text-white hover:bg-slate-800/80 border border-slate-800"
             }`}
           >
             {cat}
@@ -137,6 +137,7 @@ function Projects() {
             link={project.link}
             demo={project.demo}
             isFeatured={project.isFeatured}
+            category={project.category}
           />
         ))}
       </div>

@@ -1,31 +1,42 @@
 import React from 'react';
 
-function ProjectCard({ title, description, link, demo, technologies = [], isFeatured }) {
+function ProjectCard({ title, description, link, demo, technologies = [], isFeatured, category }) {
   return (
-    <div className="group relative p-6 flex flex-col justify-between bg-[#0c0e19]/90 border border-slate-800/80 hover:border-[#465697] shadow-xl shadow-slate-950/60 rounded-2xl transition-all duration-300 hover:-translate-y-1.5 hover:shadow-indigo-950/40">
+    <div className="group relative p-7 flex flex-col justify-between rounded-3xl bg-slate-900/40 backdrop-blur-xl border border-slate-800/80 hover:border-indigo-500/50 shadow-xl hover:shadow-2xl hover:shadow-indigo-950/40 transition-all duration-300 hover:-translate-y-2">
       <div>
-        <div className="flex items-center justify-between mb-3">
+        {/* Card Header Status */}
+        <div className="flex items-center justify-between mb-4">
           <div className="flex items-center gap-2">
-            <span className="h-2.5 w-2.5 rounded-full bg-emerald-400"></span>
-            <span className="text-[11px] font-mono tracking-wider text-slate-400 uppercase">Project</span>
+            {demo ? (
+              <span className="relative flex h-2.5 w-2.5">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+              </span>
+            ) : (
+              <span className="h-2 w-2 rounded-full bg-indigo-400"></span>
+            )}
+            <span className="text-[11px] font-mono tracking-wider text-slate-400 uppercase">
+              {demo ? "Live Deployment" : "Open Source"}
+            </span>
           </div>
+
           {isFeatured && (
-            <span className="text-[11px] font-semibold tracking-wide uppercase px-2.5 py-0.5 rounded-full bg-indigo-600/30 text-indigo-300 border border-indigo-500/40">
+            <span className="text-[11px] font-bold tracking-wide uppercase px-2.5 py-0.5 rounded-full bg-indigo-950 text-indigo-300 border border-indigo-500/40 shadow-sm">
               Featured
             </span>
           )}
         </div>
 
-        <h3 className="text-xl md:text-2xl font-bold text-white group-hover:text-indigo-300 transition-colors duration-200">
+        <h3 className="text-xl md:text-2xl font-bold text-white group-hover:text-indigo-300 transition-colors duration-200 tracking-tight">
           {title}
         </h3>
 
         {technologies && technologies.length > 0 && (
-          <div className="flex flex-wrap gap-1.5 my-3">
+          <div className="flex flex-wrap gap-1.5 my-3.5">
             {technologies.map((tech, idx) => (
               <span
                 key={idx}
-                className="text-xs font-medium px-2.5 py-0.5 rounded-md bg-[#182038] text-indigo-200/90 border border-indigo-500/20"
+                className="text-[11px] font-mono font-medium px-2.5 py-0.5 rounded-lg bg-slate-950/80 text-indigo-200/90 border border-indigo-500/20 group-hover:border-indigo-500/30"
               >
                 {tech}
               </span>
@@ -33,18 +44,43 @@ function ProjectCard({ title, description, link, demo, technologies = [], isFeat
           </div>
         )}
 
-        <p className="text-slate-300 text-sm md:text-[15px] leading-relaxed py-1">
+        <p className="text-slate-300 text-sm leading-relaxed py-1 font-light">
           {description}
         </p>
       </div>
 
-      <div className="mt-5 pt-3 border-t border-slate-800/80 flex flex-wrap items-center gap-3">
+      {/* Card Action Buttons */}
+      <div className="mt-6 pt-4 border-t border-slate-800/80 flex flex-wrap items-center gap-3">
+        {demo && (
+          <a
+            href={demo}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white py-2 px-4 text-xs md:text-sm font-semibold rounded-full bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 transition-all duration-200 hover:scale-105 inline-flex items-center gap-1.5 shadow-md shadow-emerald-950/40"
+          >
+            <svg
+              className="w-3.5 h-3.5"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.5"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+              />
+            </svg>
+            Live Demo
+          </a>
+        )}
+
         {link && (
           <a
             href={link}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white py-1.5 px-4 text-sm font-semibold rounded-full bg-[#465697] hover:bg-[#5b6eb8] transition-all duration-200 hover:scale-105 inline-flex items-center gap-1.5 shadow-md shadow-indigo-950/50"
+            className="text-slate-200 hover:text-white py-2 px-4 text-xs md:text-sm font-semibold rounded-full bg-slate-950/80 hover:bg-slate-800 border border-slate-700/80 hover:border-indigo-400/40 transition-all duration-200 hover:scale-105 inline-flex items-center gap-1.5"
           >
             <svg
               className="w-4 h-4"
@@ -58,31 +94,7 @@ function ProjectCard({ title, description, link, demo, technologies = [], isFeat
                 clipRule="evenodd"
               />
             </svg>
-            Code
-          </a>
-        )}
-
-        {demo && (
-          <a
-            href={demo}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-indigo-200 py-1.5 px-4 text-sm font-semibold rounded-full bg-slate-800/90 hover:bg-slate-700/90 border border-indigo-500/30 transition-all duration-200 hover:scale-105 inline-flex items-center gap-1.5"
-          >
-            <svg
-              className="w-4 h-4"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-              />
-            </svg>
-            Live Demo
+            GitHub
           </a>
         )}
       </div>
