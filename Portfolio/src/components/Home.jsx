@@ -70,12 +70,12 @@ function Home() {
             <p className="text-[11px] text-slate-400 font-mono mt-0.5">Current CGPA</p>
           </div>
           <div className="p-3 rounded-xl bg-slate-900/40 border border-slate-800/80">
-            <span className="text-xl md:text-2xl font-black text-emerald-400">8+</span>
+            <span className="text-xl md:text-2xl font-black text-emerald-400">6+</span>
             <p className="text-[11px] text-slate-400 font-mono mt-0.5">Projects Built</p>
           </div>
           <div className="p-3 rounded-xl bg-slate-900/40 border border-slate-800/80">
             <span className="text-xl md:text-2xl font-black text-purple-400">MERN</span>
-            <p className="text-[11px] text-slate-400 font-mono mt-0.5">& Python Stack</p>
+            <p className="text-[11px] text-slate-400 font-mono mt-0.5">Stack</p>
           </div>
         </div>
       </div>
