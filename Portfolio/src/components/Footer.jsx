@@ -10,11 +10,29 @@ function Footer() {
               Let's Connect & Build Together
             </h3>
             <p className="text-slate-400 text-sm md:text-base mt-2 max-w-md">
-              Feel free to reach out for software development opportunities, collaborations, or technical discussions.
+              Available for software engineering roles, full-stack projects, and innovative collaborations.
             </p>
           </div>
 
-          <div className="flex flex-wrap items-center gap-4">
+          <div className="flex flex-wrap items-center gap-3">
+            <a
+              href="/Gurkirat_Singh_Resume.pdf"
+              download="Gurkirat_Singh_Resume.pdf"
+              className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white text-sm font-semibold transition-all duration-200 shadow-md shadow-emerald-950/60 hover:scale-105"
+            >
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              Resume
+            </a>
+
+            <a
+              href="mailto:gurkiratsingh1874@gmail.com"
+              className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#182038] hover:bg-[#465697] text-white text-sm font-semibold transition-all duration-200 border border-slate-700 hover:border-indigo-400 hover:scale-105"
+            >
+              Email
+            </a>
+
             <a
               href="https://github.com/GurkiratSingh1874"
               target="_blank"
@@ -40,6 +58,7 @@ function Footer() {
           <div className="flex items-center gap-6">
             <a href="#About" className="hover:text-white transition-colors">About</a>
             <a href="#Skills" className="hover:text-white transition-colors">Skills</a>
+            <a href="#Experience" className="hover:text-white transition-colors">Experience</a>
             <a href="#Projects" className="hover:text-white transition-colors">Projects</a>
           </div>
         </div>

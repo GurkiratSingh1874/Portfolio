@@ -31,7 +31,7 @@ function Experience() {
                     Software Developer Intern
                   </h3>
                   <p className="text-indigo-300 font-medium text-sm md:text-base">
-                    ScrollAR4U Technologies
+                    ScrollAR4u Technologies Pvt. Ltd., Bathinda
                   </p>
                 </div>
               </div>
@@ -40,15 +40,15 @@ function Experience() {
               </span>
             </div>
 
-            <ul className="space-y-2 text-slate-300 text-sm md:text-base pl-2 list-disc list-inside">
+            <ul className="space-y-2.5 text-slate-300 text-sm md:text-base pl-2 list-disc list-inside">
               <li>
-                Engineered full-stack features and responsive interfaces for core client-facing software products.
+                Collaborated in full-stack web development using MERN stack (MongoDB, Express.js, React.js, Node.js).
               </li>
               <li>
-                Designed and integrated RESTful APIs with database schemas ensuring efficient data flow and reliable query execution.
+                Developed responsive user interfaces using React.js and reusable components.
               </li>
               <li>
-                Collaborated in code reviews, bug fixing, and frontend performance optimizations for seamless user experiences.
+                Integrated RESTful APIs to enable dynamic data exchange between frontend and backend.
               </li>
             </ul>
           </div>

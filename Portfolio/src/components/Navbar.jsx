@@ -39,6 +39,18 @@ function Navbar() {
           </li>
           <li>
             <a
+              href="/Gurkirat_Singh_Resume.pdf"
+              download="Gurkirat_Singh_Resume.pdf"
+              className="py-1.5 px-3.5 rounded-full border border-emerald-500/40 text-emerald-300 hover:bg-emerald-600 hover:text-white transition-all duration-200 hover:scale-105 inline-flex items-center gap-1.5 text-xs font-semibold"
+            >
+              <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              Resume
+            </a>
+          </li>
+          <li>
+            <a
               href="#Footer"
               className="py-2 px-4 rounded-full bg-[#465697] text-white hover:bg-[#586cb5] transition-all duration-200 hover:scale-105"
             >
@@ -105,11 +117,22 @@ function Navbar() {
                 Projects
               </a>
             </li>
-            <li>
+            <li className="flex items-center gap-3 pt-2">
+              <a
+                href="/Gurkirat_Singh_Resume.pdf"
+                download="Gurkirat_Singh_Resume.pdf"
+                onClick={() => setMenuOpen(false)}
+                className="inline-flex items-center gap-1.5 py-2 px-4 rounded-full bg-emerald-600 text-white font-semibold text-sm"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                Resume
+              </a>
               <a
                 href="#Footer"
                 onClick={() => setMenuOpen(false)}
-                className="inline-block py-2 px-5 rounded-full bg-[#465697] text-white font-semibold"
+                className="inline-block py-2 px-4 rounded-full bg-[#465697] text-white font-semibold text-sm"
               >
                 Contact
               </a>
